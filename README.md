@@ -2,7 +2,7 @@
 ## Making responsive CSS load the way it should.
 
 - [c]2012 @scottjehl, Filament Group, Inc. 
-- Licenses: MIT, GPLv2
+- Licenses: MIT, GPLv3
 
 ### The Problem
 
