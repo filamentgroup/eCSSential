@@ -2,7 +2,7 @@
 ## Making responsive CSS load the way it should.
 
 - [c]2012 @scottjehl, Filament Group, Inc. 
-- Licenses: MIT, GPLv3
+- Licenses: MIT, GPLv2
 
 ### The Problem
 
@@ -22,14 +22,14 @@ In one further improvement to browsers' default loading behavior, stylesheets th
 
 ## Check out the demos
 
-- [Default eCSSential Usage](http://scottjehl.github.com/eCSSential/examples/default)
-- [eCSSential with concatenated CSS files](http://scottjehl.github.com/eCSSential/examples/concat)
-- [eCSSential with IE-specific stylesheets](http://scottjehl.github.com/eCSSential/examples/oldIE-separate-CSS)
-- [eCSSential with a media query polyfill](http://scottjehl.github.com/eCSSential/examples/oldIE)
+- [Default eCSSential Usage](http://filamentgroup.github.com/eCSSential/examples/default)
+- [eCSSential with concatenated CSS files](http://filamentgroup.github.com/eCSSential/examples/concat)
+- [eCSSential with IE-specific stylesheets](http://filamentgroup.github.com/eCSSential/examples/oldIE-separate-CSS)
+- [eCSSential with a media query polyfill](http://filamentgroup.github.com/eCSSential/examples/oldIE)
 
 ### Seeing the Results
 
-If you're in a desktop browser, you can pop open the demo page (try the [concatentated files demo](http://scottjehl.github.com/eCSSential/examples/concat) for the best performance) and check your developer console to see which stylesheets were loaded immediately and which were deferred; changing your viewport/window width and reloading the page will change where this loading split occurs.
+If you're in a desktop browser, you can pop open the demo page (try the [concatentated files demo](http://filamentgroup.github.com/eCSSential/examples/concat) for the best performance) and check your developer console to see which stylesheets were loaded immediately and which were deferred; changing your viewport/window width and reloading the page will change where this loading split occurs.
 
 
 ## How To Use eCSSential
@@ -94,7 +94,7 @@ The following sections will reference configuration options that are defined in 
 
 By default, eCSSential creates individual `link` elements for each stylesheet it requests, which, depending on the number of CSS files you have, can make for a lot of HTTP requests. Reducing HTTP requests is one of the best ways to improve the performance of a site, so eCSSential is designed to work with concatenated files if you instruct it to do so.
 
-Optionally, eCSSential can be configured to fetch all of your CSS via only 2 HTTP requests, of which the first request is immediate and blocking (synchronous), and the second is deferred and non-blocking (asynchronous). To use this feature, you'll need the help of a server-side concatenation tool, such as [QuickConcat](https://github.com/filamentgroup/quickconcat), or a build system that generates all static versions of your potential CSS file combinations. The `examples` directory contains a demo of this feature. You can also find it [here](http://scottjehl.github.com/eCSSential/examples/concat). The demo uses static generated combinations of the CSS files.
+Optionally, eCSSential can be configured to fetch all of your CSS via only 2 HTTP requests, of which the first request is immediate and blocking (synchronous), and the second is deferred and non-blocking (asynchronous). To use this feature, you'll need the help of a server-side concatenation tool, such as [QuickConcat](https://github.com/filamentgroup/quickconcat), or a build system that generates all static versions of your potential CSS file combinations. The `examples` directory contains a demo of this feature. You can also find it [here](http://filamentgroup.github.com/eCSSential/examples/concat). The demo uses static generated combinations of the CSS files.
 
 To configure eCSSential to fetch concatenated files via a single request, you'll need to define a configuration property of `concat` as a function. The only rules for that `concat` function is that it should accept an array and return a string. For example, if your concatenated CSS files have filenames that are a long joined name of the files they contain, separated by periods with their directories and extensions removed, you might define a `concat` option like this:
 
