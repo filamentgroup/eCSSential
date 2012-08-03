@@ -51,7 +51,7 @@ http://filamentgroup.github.com/eCSSential/examples/compare/native.html
 
 http://filamentgroup.github.com/eCSSential/examples/compare/ecssential.html
 
-- 3 requests  ❘  2.29KB transferred  ❘  124ms (onload: 131ms, DOMContentLoaded: 105ms)
+- 3 requests  ❘  5.76KB transferred  ❘  209ms (onload: 215ms, DOMContentLoaded: 142ms)
 - 3 requests  ❘  5.76KB transferred  ❘  245ms (onload: 248ms, DOMContentLoaded: 143ms)
 - 3 requests  ❘  5.76KB transferred  ❘  265ms (onload: 268ms, DOMContentLoaded: 161ms)
 - 3 requests  ❘  5.76KB transferred  ❘  203ms (onload: 206ms, DOMContentLoaded: 107ms)
