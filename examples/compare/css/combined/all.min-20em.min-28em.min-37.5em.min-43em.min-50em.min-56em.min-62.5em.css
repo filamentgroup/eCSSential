@@ -892,17 +892,18 @@ div.ui-slider-mini a.ui-slider-handle .ui-btn-inner {
 	}
 
 }
-.b:after {
+.c:after {
 	display:block;
 	content: "min-28em.css was loaded.";
 	margin-top: 1em;
 }
 
 @media (min-width: 28em){
-	.b:after {
+	.c:after {
 		content: "min-28em.css was loaded and is currently applied.";
 	}
 }
+
 
 
 /* The following CSS is unrelated to this layout. 
@@ -1007,360 +1008,15 @@ div.ui-slider-mini a.ui-slider-handle .ui-btn-inner {
 	}
 
 }
-.c:after {
+.d:after {
 	display:block;
 	content: "min-37.5em.css was loaded.";
 	margin-top: 1em;
 }
 
 @media (min-width: 37.5em){
-	.c:after {
+	.d:after {
 		content: "min-37.5em.css was loaded and is currently applied.";
-	}
-}
-
-
-/* The following CSS is unrelated to this layout. 
-It's here to fill out the weight of this stylesheet so that it more realistically represents
-a real responsive design */
-label.ui-slider {
-	font-size: 16px;
-	line-height: 1.4;
-	font-weight: normal;
-	margin: 0 0 .3em;
-	display: block;
-}
-input.ui-slider-input,
-.ui-field-contain input.ui-slider-input {
-	display: inline-block;
-	width: 50px;
-	background-image: none;
-	padding: .4em;
-	margin: .5em 0;
-	line-height: 1.4;
-	font-size: 16px;
-	outline: 0;
-}
-input.ui-slider-input.ui-mini,
-.ui-field-contain input.ui-slider-input.ui-mini {
-	width: 45px;
-	margin: .25em 0;
-	font-size: 14px;
-}
-.ui-field-contain input.ui-slider-input {
-	margin: 0;
-}
-/* To do: Exclude ui-slider-input from textinput widget initSelector. The class ui-input-text is added to the slider input and label. When this is fixed, the rule below can be deleted. */
-input.ui-slider-input, .ui-field-contain input.ui-slider-input {
-	-webkit-box-sizing: content-box;
-	-moz-box-sizing: content-box;
-	-ms-box-sizing: content-box;
-	box-sizing: content-box;
-}
-select.ui-slider-switch {
-	display: none;
-}
-div.ui-slider {
-	position: relative;
-	display: inline-block;
-	overflow: visible;
-	height: 15px;
-	padding: 0;
-	margin: 0 2% 0 20px;
-	top: 4px;
-	width: 65%;
-}
-div.ui-slider-mini {
-	height: 12px;
-	margin-left: 10px;
-	top: 2px;
-}
-div.ui-slider-bg {
-	border: none;
-	height: 100%;
-	padding-right: 8px;
-}
-.ui-controlgroup a.ui-slider-handle, a.ui-slider-handle {
-	position: absolute;
-	z-index: 1;
-	top: 50%;
-	width: 28px;
-	height: 28px;
-	margin-top: -15px;
-	margin-left: -15px;
-	outline: 0;
-}
-a.ui-slider-handle .ui-btn-inner {
-	padding: 0;
-	height: 100%;
-}
-div.ui-slider-mini a.ui-slider-handle {
-	height: 14px;
-	width: 14px;
-	margin: -8px 0 0 -7px;
-}
-div.ui-slider-mini a.ui-slider-handle .ui-btn-inner {
-	height: 30px;
-	width: 30px;
-	padding: 0;
-	margin: -9px 0 0 -9px;
-	border-top: none;
-}
-
-@media all and (min-width: 450px) {
-	.ui-field-contain label.ui-slider {
-		vertical-align: top;
-		display: inline-block;
-		width: 20%;
-		margin: 0 2% 0 0;
-	}
-	.ui-field-contain div.ui-slider {
-		width: 43%;
-	}
-	.ui-field-contain div.ui-slider-switch {
-		width: 5.5em;
-	}
-
-}
-.c:after {
-	display:block;
-	content: "min-43em.css was loaded.";
-	margin-top: 1em;
-}
-
-@media (min-width: 43em){
-	.c:after {
-		content: "min-43em.css was loaded and is currently applied.";
-	}
-}
-
-
-/* The following CSS is unrelated to this layout. 
-It's here to fill out the weight of this stylesheet so that it more realistically represents
-a real responsive design */
-label.ui-slider {
-	font-size: 16px;
-	line-height: 1.4;
-	font-weight: normal;
-	margin: 0 0 .3em;
-	display: block;
-}
-input.ui-slider-input,
-.ui-field-contain input.ui-slider-input {
-	display: inline-block;
-	width: 50px;
-	background-image: none;
-	padding: .4em;
-	margin: .5em 0;
-	line-height: 1.4;
-	font-size: 16px;
-	outline: 0;
-}
-input.ui-slider-input.ui-mini,
-.ui-field-contain input.ui-slider-input.ui-mini {
-	width: 45px;
-	margin: .25em 0;
-	font-size: 14px;
-}
-.ui-field-contain input.ui-slider-input {
-	margin: 0;
-}
-/* To do: Exclude ui-slider-input from textinput widget initSelector. The class ui-input-text is added to the slider input and label. When this is fixed, the rule below can be deleted. */
-input.ui-slider-input, .ui-field-contain input.ui-slider-input {
-	-webkit-box-sizing: content-box;
-	-moz-box-sizing: content-box;
-	-ms-box-sizing: content-box;
-	box-sizing: content-box;
-}
-select.ui-slider-switch {
-	display: none;
-}
-div.ui-slider {
-	position: relative;
-	display: inline-block;
-	overflow: visible;
-	height: 15px;
-	padding: 0;
-	margin: 0 2% 0 20px;
-	top: 4px;
-	width: 65%;
-}
-div.ui-slider-mini {
-	height: 12px;
-	margin-left: 10px;
-	top: 2px;
-}
-div.ui-slider-bg {
-	border: none;
-	height: 100%;
-	padding-right: 8px;
-}
-.ui-controlgroup a.ui-slider-handle, a.ui-slider-handle {
-	position: absolute;
-	z-index: 1;
-	top: 50%;
-	width: 28px;
-	height: 28px;
-	margin-top: -15px;
-	margin-left: -15px;
-	outline: 0;
-}
-a.ui-slider-handle .ui-btn-inner {
-	padding: 0;
-	height: 100%;
-}
-div.ui-slider-mini a.ui-slider-handle {
-	height: 14px;
-	width: 14px;
-	margin: -8px 0 0 -7px;
-}
-div.ui-slider-mini a.ui-slider-handle .ui-btn-inner {
-	height: 30px;
-	width: 30px;
-	padding: 0;
-	margin: -9px 0 0 -9px;
-	border-top: none;
-}
-
-@media all and (min-width: 450px) {
-	.ui-field-contain label.ui-slider {
-		vertical-align: top;
-		display: inline-block;
-		width: 20%;
-		margin: 0 2% 0 0;
-	}
-	.ui-field-contain div.ui-slider {
-		width: 43%;
-	}
-	.ui-field-contain div.ui-slider-switch {
-		width: 5.5em;
-	}
-
-}
-.d:after {
-	display:block;
-	content: "min-50em.css was loaded.";
-	margin-top: 1em;
-}
-
-@media (min-width: 50em){
-	.d:after {
-		content: "min-50em.css was loaded and is currently applied.";
-	}
-}
-
-
-/* The following CSS is unrelated to this layout. 
-It's here to fill out the weight of this stylesheet so that it more realistically represents
-a real responsive design */
-label.ui-slider {
-	font-size: 16px;
-	line-height: 1.4;
-	font-weight: normal;
-	margin: 0 0 .3em;
-	display: block;
-}
-input.ui-slider-input,
-.ui-field-contain input.ui-slider-input {
-	display: inline-block;
-	width: 50px;
-	background-image: none;
-	padding: .4em;
-	margin: .5em 0;
-	line-height: 1.4;
-	font-size: 16px;
-	outline: 0;
-}
-input.ui-slider-input.ui-mini,
-.ui-field-contain input.ui-slider-input.ui-mini {
-	width: 45px;
-	margin: .25em 0;
-	font-size: 14px;
-}
-.ui-field-contain input.ui-slider-input {
-	margin: 0;
-}
-/* To do: Exclude ui-slider-input from textinput widget initSelector. The class ui-input-text is added to the slider input and label. When this is fixed, the rule below can be deleted. */
-input.ui-slider-input, .ui-field-contain input.ui-slider-input {
-	-webkit-box-sizing: content-box;
-	-moz-box-sizing: content-box;
-	-ms-box-sizing: content-box;
-	box-sizing: content-box;
-}
-select.ui-slider-switch {
-	display: none;
-}
-div.ui-slider {
-	position: relative;
-	display: inline-block;
-	overflow: visible;
-	height: 15px;
-	padding: 0;
-	margin: 0 2% 0 20px;
-	top: 4px;
-	width: 65%;
-}
-div.ui-slider-mini {
-	height: 12px;
-	margin-left: 10px;
-	top: 2px;
-}
-div.ui-slider-bg {
-	border: none;
-	height: 100%;
-	padding-right: 8px;
-}
-.ui-controlgroup a.ui-slider-handle, a.ui-slider-handle {
-	position: absolute;
-	z-index: 1;
-	top: 50%;
-	width: 28px;
-	height: 28px;
-	margin-top: -15px;
-	margin-left: -15px;
-	outline: 0;
-}
-a.ui-slider-handle .ui-btn-inner {
-	padding: 0;
-	height: 100%;
-}
-div.ui-slider-mini a.ui-slider-handle {
-	height: 14px;
-	width: 14px;
-	margin: -8px 0 0 -7px;
-}
-div.ui-slider-mini a.ui-slider-handle .ui-btn-inner {
-	height: 30px;
-	width: 30px;
-	padding: 0;
-	margin: -9px 0 0 -9px;
-	border-top: none;
-}
-
-@media all and (min-width: 450px) {
-	.ui-field-contain label.ui-slider {
-		vertical-align: top;
-		display: inline-block;
-		width: 20%;
-		margin: 0 2% 0 0;
-	}
-	.ui-field-contain div.ui-slider {
-		width: 43%;
-	}
-	.ui-field-contain div.ui-slider-switch {
-		width: 5.5em;
-	}
-
-}
-.d:after {
-	display:block;
-	content: "min-56em.css was loaded.";
-	margin-top: 1em;
-}
-
-@media (min-width: 56em){
-	.d:after {
-		content: "min-56em.css was loaded and is currently applied.";
 	}
 }
 
@@ -1469,15 +1125,362 @@ div.ui-slider-mini a.ui-slider-handle .ui-btn-inner {
 }
 .e:after {
 	display:block;
+	content: "min-43em.css was loaded.";
+	margin-top: 1em;
+}
+
+@media (min-width: 43em){
+	.e:after {
+		content: "min-43em.css was loaded and is currently applied.";
+	}
+}
+
+
+
+/* The following CSS is unrelated to this layout. 
+It's here to fill out the weight of this stylesheet so that it more realistically represents
+a real responsive design */
+label.ui-slider {
+	font-size: 16px;
+	line-height: 1.4;
+	font-weight: normal;
+	margin: 0 0 .3em;
+	display: block;
+}
+input.ui-slider-input,
+.ui-field-contain input.ui-slider-input {
+	display: inline-block;
+	width: 50px;
+	background-image: none;
+	padding: .4em;
+	margin: .5em 0;
+	line-height: 1.4;
+	font-size: 16px;
+	outline: 0;
+}
+input.ui-slider-input.ui-mini,
+.ui-field-contain input.ui-slider-input.ui-mini {
+	width: 45px;
+	margin: .25em 0;
+	font-size: 14px;
+}
+.ui-field-contain input.ui-slider-input {
+	margin: 0;
+}
+/* To do: Exclude ui-slider-input from textinput widget initSelector. The class ui-input-text is added to the slider input and label. When this is fixed, the rule below can be deleted. */
+input.ui-slider-input, .ui-field-contain input.ui-slider-input {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-ms-box-sizing: content-box;
+	box-sizing: content-box;
+}
+select.ui-slider-switch {
+	display: none;
+}
+div.ui-slider {
+	position: relative;
+	display: inline-block;
+	overflow: visible;
+	height: 15px;
+	padding: 0;
+	margin: 0 2% 0 20px;
+	top: 4px;
+	width: 65%;
+}
+div.ui-slider-mini {
+	height: 12px;
+	margin-left: 10px;
+	top: 2px;
+}
+div.ui-slider-bg {
+	border: none;
+	height: 100%;
+	padding-right: 8px;
+}
+.ui-controlgroup a.ui-slider-handle, a.ui-slider-handle {
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	width: 28px;
+	height: 28px;
+	margin-top: -15px;
+	margin-left: -15px;
+	outline: 0;
+}
+a.ui-slider-handle .ui-btn-inner {
+	padding: 0;
+	height: 100%;
+}
+div.ui-slider-mini a.ui-slider-handle {
+	height: 14px;
+	width: 14px;
+	margin: -8px 0 0 -7px;
+}
+div.ui-slider-mini a.ui-slider-handle .ui-btn-inner {
+	height: 30px;
+	width: 30px;
+	padding: 0;
+	margin: -9px 0 0 -9px;
+	border-top: none;
+}
+
+@media all and (min-width: 450px) {
+	.ui-field-contain label.ui-slider {
+		vertical-align: top;
+		display: inline-block;
+		width: 20%;
+		margin: 0 2% 0 0;
+	}
+	.ui-field-contain div.ui-slider {
+		width: 43%;
+	}
+	.ui-field-contain div.ui-slider-switch {
+		width: 5.5em;
+	}
+
+}
+.f:after {
+	display:block;
+	content: "min-50em.css was loaded.";
+	margin-top: 1em;
+}
+
+@media (min-width: 50em){
+	.f:after {
+		content: "min-50em.css was loaded and is currently applied.";
+	}
+}
+
+
+/* The following CSS is unrelated to this layout. 
+It's here to fill out the weight of this stylesheet so that it more realistically represents
+a real responsive design */
+label.ui-slider {
+	font-size: 16px;
+	line-height: 1.4;
+	font-weight: normal;
+	margin: 0 0 .3em;
+	display: block;
+}
+input.ui-slider-input,
+.ui-field-contain input.ui-slider-input {
+	display: inline-block;
+	width: 50px;
+	background-image: none;
+	padding: .4em;
+	margin: .5em 0;
+	line-height: 1.4;
+	font-size: 16px;
+	outline: 0;
+}
+input.ui-slider-input.ui-mini,
+.ui-field-contain input.ui-slider-input.ui-mini {
+	width: 45px;
+	margin: .25em 0;
+	font-size: 14px;
+}
+.ui-field-contain input.ui-slider-input {
+	margin: 0;
+}
+/* To do: Exclude ui-slider-input from textinput widget initSelector. The class ui-input-text is added to the slider input and label. When this is fixed, the rule below can be deleted. */
+input.ui-slider-input, .ui-field-contain input.ui-slider-input {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-ms-box-sizing: content-box;
+	box-sizing: content-box;
+}
+select.ui-slider-switch {
+	display: none;
+}
+div.ui-slider {
+	position: relative;
+	display: inline-block;
+	overflow: visible;
+	height: 15px;
+	padding: 0;
+	margin: 0 2% 0 20px;
+	top: 4px;
+	width: 65%;
+}
+div.ui-slider-mini {
+	height: 12px;
+	margin-left: 10px;
+	top: 2px;
+}
+div.ui-slider-bg {
+	border: none;
+	height: 100%;
+	padding-right: 8px;
+}
+.ui-controlgroup a.ui-slider-handle, a.ui-slider-handle {
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	width: 28px;
+	height: 28px;
+	margin-top: -15px;
+	margin-left: -15px;
+	outline: 0;
+}
+a.ui-slider-handle .ui-btn-inner {
+	padding: 0;
+	height: 100%;
+}
+div.ui-slider-mini a.ui-slider-handle {
+	height: 14px;
+	width: 14px;
+	margin: -8px 0 0 -7px;
+}
+div.ui-slider-mini a.ui-slider-handle .ui-btn-inner {
+	height: 30px;
+	width: 30px;
+	padding: 0;
+	margin: -9px 0 0 -9px;
+	border-top: none;
+}
+
+@media all and (min-width: 450px) {
+	.ui-field-contain label.ui-slider {
+		vertical-align: top;
+		display: inline-block;
+		width: 20%;
+		margin: 0 2% 0 0;
+	}
+	.ui-field-contain div.ui-slider {
+		width: 43%;
+	}
+	.ui-field-contain div.ui-slider-switch {
+		width: 5.5em;
+	}
+
+}
+.g:after {
+	display:block;
+	content: "min-56em.css was loaded.";
+	margin-top: 1em;
+}
+
+@media (min-width: 56em){
+	.g:after {
+		content: "min-56em.css was loaded and is currently applied.";
+	}
+}
+
+
+/* The following CSS is unrelated to this layout. 
+It's here to fill out the weight of this stylesheet so that it more realistically represents
+a real responsive design */
+label.ui-slider {
+	font-size: 16px;
+	line-height: 1.4;
+	font-weight: normal;
+	margin: 0 0 .3em;
+	display: block;
+}
+input.ui-slider-input,
+.ui-field-contain input.ui-slider-input {
+	display: inline-block;
+	width: 50px;
+	background-image: none;
+	padding: .4em;
+	margin: .5em 0;
+	line-height: 1.4;
+	font-size: 16px;
+	outline: 0;
+}
+input.ui-slider-input.ui-mini,
+.ui-field-contain input.ui-slider-input.ui-mini {
+	width: 45px;
+	margin: .25em 0;
+	font-size: 14px;
+}
+.ui-field-contain input.ui-slider-input {
+	margin: 0;
+}
+/* To do: Exclude ui-slider-input from textinput widget initSelector. The class ui-input-text is added to the slider input and label. When this is fixed, the rule below can be deleted. */
+input.ui-slider-input, .ui-field-contain input.ui-slider-input {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-ms-box-sizing: content-box;
+	box-sizing: content-box;
+}
+select.ui-slider-switch {
+	display: none;
+}
+div.ui-slider {
+	position: relative;
+	display: inline-block;
+	overflow: visible;
+	height: 15px;
+	padding: 0;
+	margin: 0 2% 0 20px;
+	top: 4px;
+	width: 65%;
+}
+div.ui-slider-mini {
+	height: 12px;
+	margin-left: 10px;
+	top: 2px;
+}
+div.ui-slider-bg {
+	border: none;
+	height: 100%;
+	padding-right: 8px;
+}
+.ui-controlgroup a.ui-slider-handle, a.ui-slider-handle {
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	width: 28px;
+	height: 28px;
+	margin-top: -15px;
+	margin-left: -15px;
+	outline: 0;
+}
+a.ui-slider-handle .ui-btn-inner {
+	padding: 0;
+	height: 100%;
+}
+div.ui-slider-mini a.ui-slider-handle {
+	height: 14px;
+	width: 14px;
+	margin: -8px 0 0 -7px;
+}
+div.ui-slider-mini a.ui-slider-handle .ui-btn-inner {
+	height: 30px;
+	width: 30px;
+	padding: 0;
+	margin: -9px 0 0 -9px;
+	border-top: none;
+}
+
+@media all and (min-width: 450px) {
+	.ui-field-contain label.ui-slider {
+		vertical-align: top;
+		display: inline-block;
+		width: 20%;
+		margin: 0 2% 0 0;
+	}
+	.ui-field-contain div.ui-slider {
+		width: 43%;
+	}
+	.ui-field-contain div.ui-slider-switch {
+		width: 5.5em;
+	}
+
+}
+.h:after {
+	display:block;
 	content: "min-62.5em.css was loaded.";
 	margin-top: 1em;
 }
 
 @media (min-width: 62.5em){
-	.e:after {
+	.h:after {
 		content: "min-62.5em.css was loaded and is currently applied.";
 	}
 }
+
 
 
 /* The following CSS is unrelated to this layout. 

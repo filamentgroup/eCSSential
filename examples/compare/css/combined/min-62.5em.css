@@ -1,14 +1,15 @@
-.e:after {
+.h:after {
 	display:block;
 	content: "min-62.5em.css was loaded.";
 	margin-top: 1em;
 }
 
 @media (min-width: 62.5em){
-	.e:after {
+	.h:after {
 		content: "min-62.5em.css was loaded and is currently applied.";
 	}
 }
+
 
 
 /* The following CSS is unrelated to this layout. 

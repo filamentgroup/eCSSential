@@ -1,11 +1,11 @@
-.b:after {
+.c:after {
 	display:block;
 	content: "min-28em.css was loaded.";
 	margin-top: 1em;
 }
 
 @media (min-width: 28em){
-	.b:after {
+	.c:after {
 		content: "min-28em.css was loaded and is currently applied.";
 	}
 }

@@ -892,17 +892,18 @@ div.ui-slider-mini a.ui-slider-handle .ui-btn-inner {
 	}
 
 }
-.b:after {
+.c:after {
 	display:block;
 	content: "min-28em.css was loaded.";
 	margin-top: 1em;
 }
 
 @media (min-width: 28em){
-	.b:after {
+	.c:after {
 		content: "min-28em.css was loaded and is currently applied.";
 	}
 }
+
 
 
 /* The following CSS is unrelated to this layout. 
@@ -1007,14 +1008,14 @@ div.ui-slider-mini a.ui-slider-handle .ui-btn-inner {
 	}
 
 }
-.c:after {
+.d:after {
 	display:block;
 	content: "min-37.5em.css was loaded.";
 	margin-top: 1em;
 }
 
 @media (min-width: 37.5em){
-	.c:after {
+	.d:after {
 		content: "min-37.5em.css was loaded and is currently applied.";
 	}
 }

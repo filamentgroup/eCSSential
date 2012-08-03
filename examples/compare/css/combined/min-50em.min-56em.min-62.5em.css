@@ -1,11 +1,11 @@
-.d:after {
+.f:after {
 	display:block;
 	content: "min-50em.css was loaded.";
 	margin-top: 1em;
 }
 
 @media (min-width: 50em){
-	.d:after {
+	.f:after {
 		content: "min-50em.css was loaded and is currently applied.";
 	}
 }
@@ -113,14 +113,14 @@ div.ui-slider-mini a.ui-slider-handle .ui-btn-inner {
 	}
 
 }
-.d:after {
+.g:after {
 	display:block;
 	content: "min-56em.css was loaded.";
 	margin-top: 1em;
 }
 
 @media (min-width: 56em){
-	.d:after {
+	.g:after {
 		content: "min-56em.css was loaded and is currently applied.";
 	}
 }
@@ -228,17 +228,18 @@ div.ui-slider-mini a.ui-slider-handle .ui-btn-inner {
 	}
 
 }
-.e:after {
+.h:after {
 	display:block;
 	content: "min-62.5em.css was loaded.";
 	margin-top: 1em;
 }
 
 @media (min-width: 62.5em){
-	.e:after {
+	.h:after {
 		content: "min-62.5em.css was loaded and is currently applied.";
 	}
 }
+
 
 
 /* The following CSS is unrelated to this layout. 
