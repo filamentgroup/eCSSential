@@ -1,12 +1,12 @@
-.e:after {
+.d:after {
 	display:block;
-	content: "min-62.5em.css was loaded.";
+	content: "min-56em.css was loaded.";
 	margin-top: 1em;
 }
 
-@media (min-width: 62.5em){
-	.e:after {
-		content: "min-62.5em.css was loaded and is currently applied.";
+@media (min-width: 56em){
+	.d:after {
+		content: "min-56em.css was loaded and is currently applied.";
 	}
 }
 
@@ -113,15 +113,15 @@ div.ui-slider-mini a.ui-slider-handle .ui-btn-inner {
 	}
 
 }
-.d:after {
+.e:after {
 	display:block;
-	content: "min-50em.css was loaded.";
+	content: "min-62.5em.css was loaded.";
 	margin-top: 1em;
 }
 
-@media (min-width: 50em){
-	.d:after {
-		content: "min-50em.css was loaded and is currently applied.";
+@media (min-width: 62.5em){
+	.e:after {
+		content: "min-62.5em.css was loaded and is currently applied.";
 	}
 }
 
