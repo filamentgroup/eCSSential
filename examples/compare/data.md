@@ -51,6 +51,9 @@ http://filamentgroup.github.com/eCSSential/examples/compare/concat.html
 - 2 requests  ❘  13.79KB transferred  ❘  267ms (onload: 277ms, DOMContentLoaded: 170ms)
 - ** Avg: 2 requests  ❘  13.79KB transferred  ❘  248ms (onload: 260ms, DOMContentLoaded: 141ms)**
 
+**Requests:** ecssential & concat, **transfer:** concat, **total time**: concat, **DOMcontentloaded**: native
+
+
 #### At window width ~30em
 
 http://filamentgroup.github.com/eCSSential/examples/compare/native.html
@@ -79,6 +82,9 @@ http://filamentgroup.github.com/eCSSential/examples/compare/concat.html
 - 2 requests  ❘  13.79KB transferred  ❘  289ms (onload: 305ms, DOMContentLoaded: 168ms)
 - 2 requests  ❘  13.79KB transferred  ❘  206ms (onload: 217ms, DOMContentLoaded: 103ms)
 - ** Avg: 2 requests  ❘  13.79KB transferred  ❘  262ms (onload: 217ms, DOMContentLoaded: 156ms)**
+
+**Requests:** concat, **transfer:** concat, **total time**: ecssential, **DOMcontentloaded**: native
+
 
 ### On 4G connection 
 
@@ -111,6 +117,9 @@ http://filamentgroup.github.com/eCSSential/examples/compare/concat.html
 - 2 requests  ❘  13.79KB transferred  ❘  845ms (onload: 856ms, DOMContentLoaded: 173ms)
 - ** Avg: 2 requests  ❘  13.79KB transferred  ❘  596ms (onload: 608ms, DOMContentLoaded: 178ms)**
 
+**Requests:** concat & ecssential, **transfer:** concat, **total time**: concat, **DOMcontentloaded**: concat
+
+
 #### At window width ~30em
 
 http://filamentgroup.github.com/eCSSential/examples/compare/native.html
@@ -141,3 +150,4 @@ http://filamentgroup.github.com/eCSSential/examples/compare/concat.html
 - 2 requests  ❘  13.79KB transferred  ❘  724ms (onload: 735ms, DOMContentLoaded: 305ms)
 - ** Avg: 2 requests  ❘  13.79KB transferred  ❘  840ms (onload: 850ms, DOMContentLoaded: 176ms)**
 
+**Requests:** concat & ecssential, **transfer:** concat, **total time**: ecssential, **DOMcontentloaded**: concat
