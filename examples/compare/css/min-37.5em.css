@@ -14,6 +14,247 @@
 /* The following CSS is unrelated to this layout. 
 It's here to fill out the weight of this stylesheet so that it more realistically represents
 a real responsive design */
+.ui-checkbox, .ui-radio {
+	position: relative;
+	clear: both;
+	margin: 0;
+	z-index: 1;
+}
+.ui-checkbox .ui-btn, .ui-radio .ui-btn {
+	margin: .5em 0;
+	text-align: left;
+	z-index: 2;
+}
+.ui-checkbox .ui-btn.ui-mini, .ui-radio .ui-btn.ui-mini {
+	margin: .25em 0;
+}
+.ui-controlgroup .ui-checkbox .ui-btn, .ui-controlgroup .ui-radio .ui-btn {
+	margin: 0;
+}
+.ui-checkbox .ui-btn-inner, .ui-radio .ui-btn-inner {
+	white-space: normal;
+}
+.ui-checkbox .ui-btn-icon-left .ui-btn-inner,.ui-radio .ui-btn-icon-left .ui-btn-inner {
+	padding-left: 45px;
+}
+.ui-checkbox .ui-mini.ui-btn-icon-left .ui-btn-inner,.ui-radio .ui-mini.ui-btn-icon-left .ui-btn-inner {
+	padding-left: 36px;
+}
+
+.ui-checkbox .ui-btn-icon-right .ui-btn-inner, .ui-radio .ui-btn-icon-right .ui-btn-inner {
+	padding-right: 45px;
+}
+.ui-checkbox .ui-mini.ui-btn-icon-right .ui-btn-inner, .ui-radio .ui-mini.ui-btn-icon-right .ui-btn-inner {
+	padding-right: 36px;
+}
+
+.ui-checkbox .ui-btn-icon-top .ui-btn-inner,.ui-radio .ui-btn-icon-top .ui-btn-inner {
+	padding-right: 0;
+	padding-left: 0;
+	text-align: center;
+}
+.ui-checkbox .ui-btn-icon-bottom .ui-btn-inner, .ui-radio .ui-btn-icon-bottom .ui-btn-inner {
+	padding-right: 0;
+	padding-left: 0;
+	text-align: center;
+}
+
+.ui-checkbox .ui-icon, .ui-radio .ui-icon {
+	top: 1.1em;
+}
+.ui-checkbox .ui-btn-icon-left .ui-icon, .ui-radio .ui-btn-icon-left .ui-icon {
+	left: 15px;
+}
+.ui-checkbox .ui-mini.ui-btn-icon-left .ui-icon, .ui-radio .ui-mini.ui-btn-icon-left .ui-icon {
+	left: 9px;
+}
+.ui-checkbox .ui-btn-icon-right .ui-icon, .ui-radio .ui-btn-icon-right .ui-icon {
+	right: 15px;
+}
+.ui-checkbox .ui-mini.ui-btn-icon-right .ui-icon, .ui-radio .ui-mini.ui-btn-icon-right .ui-icon {
+	right: 9px;
+}
+.ui-checkbox .ui-btn-icon-top .ui-icon, .ui-radio .ui-btn-icon-top .ui-icon {
+	top: 10px;
+}
+.ui-checkbox .ui-btn-icon-bottom .ui-icon, .ui-radio .ui-btn-icon-bottom .ui-icon {
+	top: auto;
+	bottom: 10px;
+}
+.ui-checkbox .ui-btn-icon-right .ui-icon, .ui-radio .ui-btn-icon-right .ui-icon {
+	right: 15px;
+}
+.ui-checkbox .ui-mini.ui-btn-icon-right .ui-icon, .ui-radio .ui-mini.ui-btn-icon-right .ui-icon {
+	right: 9px;
+}
+
+/* input, label positioning */
+.ui-checkbox input,.ui-radio input {
+	position: absolute;
+	left: 20px;
+	top: 50%;
+	width: 10px;
+	height: 10px;
+	margin: -5px 0 0 0;
+	outline: 0 !important;
+	z-index: 1;
+}
+.ui-select {
+	display: block;
+	position: relative;
+}
+.ui-select select {
+	position: absolute;
+	left: -9999px;
+	top: -9999px;
+}
+.ui-select .ui-btn {
+	overflow: hidden;
+	opacity: 1;
+}
+.ui-field-contain .ui-select .ui-btn {
+	margin: 0;
+}
+/* Fixes #2588: When Windows Phone 7.5 (Mango) tries to calculate a numeric opacity for a select (including "inherit") without explicitly specifying an opacity on the parent to give it context, a bug appears where clicking elsewhere on the page after opening the select will open the select again. */
+.ui-select .ui-btn select {
+	cursor: pointer;
+	-webkit-appearance: none;
+	left: 0;
+	top: 0;
+	width: 100%;
+	min-height: 1.5em;
+	min-height: 100%;
+	height: 3em;
+	max-height: 100%;
+	filter: Alpha(Opacity=0);
+	opacity: 0;
+	z-index: 2;
+}
+
+.ui-select .ui-disabled {
+	opacity: .3;
+}
+/* Display none because of issues with IE/WP's filter alpha opacity */
+.ui-select .ui-disabled select {
+	display: none;
+}
+
+@-moz-document url-prefix() {.ui-select .ui-btn select {
+	opacity: 0.0001;
+}
+
+}
+.ui-select .ui-btn.ui-select-nativeonly {
+border-radius: 0;
+border: 0;
+}
+.ui-select .ui-btn.ui-select-nativeonly select {
+opacity: 1;
+text-indent: 0;
+display: block;
+}
+.ui-select .ui-disabled.ui-select-nativeonly .ui-btn-inner {
+opacity: 0;
+}
+
+.ui-select .ui-btn-icon-right .ui-btn-inner, .ui-select .ui-li-has-count .ui-btn-inner {
+padding-right: 45px;
+}
+.ui-select .ui-mini.ui-btn-icon-right .ui-btn-inner {
+padding-right: 32px;
+}
+.ui-select .ui-btn-icon-right.ui-li-has-count .ui-btn-inner {
+padding-right: 80px;
+}
+.ui-select .ui-mini.ui-btn-icon-right.ui-li-has-count .ui-btn-inner {
+padding-right: 67px;
+}
+.ui-select .ui-btn-icon-right .ui-icon {
+right: 15px;
+}
+.ui-select .ui-mini.ui-btn-icon-right .ui-icon {
+right: 7px;
+}
+.ui-select .ui-btn-icon-right.ui-li-has-count .ui-li-count {
+right: 45px;
+}
+.ui-select .ui-mini.ui-btn-icon-right.ui-li-has-count .ui-li-count {
+right: 32px;
+}
+
+/* labels */
+label.ui-select {
+font-size: 16px;
+line-height: 1.4;
+font-weight: normal;
+margin: 0 0 .3em;
+display: block;
+}
+
+/*listbox*/
+.ui-select .ui-btn-text, .ui-selectmenu .ui-btn-text {
+display: block;
+min-height: 1em;
+overflow: hidden !important;
+/* This !important is required for iPad Safari specifically. See https://github.com/jquery/jquery-mobile/issues/2647 */
+}
+.ui-select .ui-btn-text {
+text-overflow: ellipsis;
+}
+
+.ui-selectmenu {
+padding: 6px;
+min-width: 160px;
+}
+.ui-selectmenu .ui-listview {
+margin: 0;
+}
+.ui-selectmenu .ui-btn.ui-li-divider {
+cursor: default;
+}
+.ui-selectmenu-hidden {
+top: -99999px;
+left: -9999px;
+}
+.ui-screen-hidden, .ui-selectmenu-list .ui-li .ui-icon {
+display: none;
+}
+.ui-selectmenu-list .ui-li .ui-icon {
+display: block;
+}
+.ui-li.ui-selectmenu-placeholder {
+display: none;
+}
+.ui-selectmenu .ui-header {
+margin: 0;
+padding: 0;
+}
+.ui-selectmenu .ui-header .ui-title {
+margin: 0.6em 46px 0.8em;
+}
+
+@media all and (min-width: 450px) {
+.ui-field-contain label.ui-select {
+	vertical-align: top;
+	display: inline-block;
+	width: 20%;
+	margin: 0 2% 0 0;
+}
+.ui-field-contain .ui-select {
+	width: 78%;
+	display: inline-block;
+}
+.ui-hide-label .ui-select {
+	width: 100%;
+}
+
+}
+
+/* when no placeholder is defined in a multiple select, the header height doesn't even extend past the close button.  this shim's content in there */
+.ui-selectmenu .ui-header h1:after {
+content: '.';
+visibility: hidden;
+}
 label.ui-slider {
 	font-size: 16px;
 	line-height: 1.4;
@@ -41,12 +282,15 @@ input.ui-slider-input.ui-mini,
 .ui-field-contain input.ui-slider-input {
 	margin: 0;
 }
-/* To do: Exclude ui-slider-input from textinput widget initSelector. The class ui-input-text is added to the slider input and label. When this is fixed, the rule below can be deleted. */
 input.ui-slider-input, .ui-field-contain input.ui-slider-input {
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	-ms-box-sizing: content-box;
 	box-sizing: content-box;
+}
+/* Fixes input fields being to small on Safari/Mac because of the up and down arrows. */
+.ui-slider-input::-webkit-outer-spin-button {
+	margin: 0;
 }
 select.ui-slider-switch {
 	display: none;
@@ -77,8 +321,7 @@ div.ui-slider-bg {
 	top: 50%;
 	width: 28px;
 	height: 28px;
-	margin-top: -15px;
-	margin-left: -15px;
+	margin: -15px 0 0 -15px;
 	outline: 0;
 }
 a.ui-slider-handle .ui-btn-inner {
@@ -113,3 +356,73 @@ div.ui-slider-mini a.ui-slider-handle .ui-btn-inner {
 	}
 
 }
+
+div.ui-slider-switch {
+	height: 32px;
+	margin-left: 0;
+	width: 5.8em;
+}
+a.ui-slider-handle-snapping {
+	-webkit-transition: left 70ms linear;
+	-moz-transition: left 70ms linear;
+}
+div.ui-slider-switch .ui-slider-handle {
+	margin: 1px 0 0 -15px;
+}
+.ui-slider-inneroffset {
+	margin: 0 16px;
+	position: relative;
+	z-index: 1;
+}
+
+div.ui-slider-switch.ui-slider-mini {
+	width: 5em;
+	height: 29px;
+}
+div.ui-slider-switch.ui-slider-mini .ui-slider-inneroffset {
+	margin: 0 15px 0 14px;
+}
+div.ui-slider-switch.ui-slider-mini .ui-slider-handle {
+	width: 25px;
+	height: 25px;
+	margin: 1px 0 0 -13px;
+}
+div.ui-slider-switch.ui-slider-mini a.ui-slider-handle .ui-btn-inner {
+	height: 30px;
+	width: 30px;
+	padding: 0;
+	margin: 0;
+}
+
+span.ui-slider-label {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	overflow: hidden;
+	font-size: 16px;
+	top: 0;
+	line-height: 2;
+	min-height: 100%;
+	border-width: 0;
+	white-space: nowrap;
+}
+.ui-slider-mini span.ui-slider-label {
+	font-size: 14px;
+}
+
+span.ui-slider-label-a {
+	z-index: 1;
+	left: 0;
+	text-indent: -1.5em;
+}
+span.ui-slider-label-b {
+	z-index: 0;
+	right: 0;
+	text-indent: 1.5em;
+}
+
+.ui-slider-inline {
+	width: 120px;
+	display: inline-block;
+}
+

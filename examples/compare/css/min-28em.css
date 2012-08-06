@@ -14,102 +14,298 @@
 /* The following CSS is unrelated to this layout. 
 It's here to fill out the weight of this stylesheet so that it more realistically represents
 a real responsive design */
-label.ui-slider {
-	font-size: 16px;
-	line-height: 1.4;
-	font-weight: normal;
-	margin: 0 0 .3em;
+/* some unsets - more probably needed */
+.ui-mobile, .ui-mobile body {
+height: 99.9%;
+}
+.ui-mobile fieldset, .ui-page {
+padding: 0;
+margin: 0;
+}
+.ui-mobile a img, .ui-mobile fieldset {
+border-width: 0;
+}
+
+/* responsive page widths */
+.ui-mobile-viewport {
+margin: 0;
+overflow-x: visible;
+-webkit-text-size-adjust: 100%;
+-ms-text-size-adjust: none;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* Issue #2066 */
+body.ui-mobile-viewport,
+div.ui-mobile-viewport {
+overflow-x: hidden;
+}
+
+/* "page" containers - full-screen views, one should always be in view post-pageload */
+.ui-mobile [data-role=page], .ui-mobile [data-role=dialog], .ui-page {
+top: 0;
+left: 0;
+width: 100%;
+min-height: 100%;
+position: absolute;
+display: none;
+border: 0;
+}
+.ui-mobile .ui-page-active {
+display: block;
+overflow: visible;
+}
+
+/* on ios4, setting focus on the page element causes flashing during transitions when there is an outline, so we turn off outlines */
+.ui-page {
+outline: none;
+}
+
+/*orientations from js are available */
+@media screen and (orientation: portrait) {
+.ui-mobile, .ui-mobile .ui-page {
+min-height: 420px;
+}
+
+}
+@media screen and (orientation: landscape) {
+.ui-mobile, .ui-mobile .ui-page {
+min-height: 300px;
+}
+
+}
+
+/* loading screen */
+.ui-loading .ui-loader {
+display: block;
+}
+.ui-loader {
+display: none;
+z-index: 9999999;
+position: fixed;
+top: 50%;
+left: 50%;
+border: 0;
+}
+.ui-loader-default {
+background: none;
+filter: Alpha(Opacity=18);
+opacity: .18;
+width: 46px;
+height: 46px;
+margin-left: -23px;
+margin-top: -23px;
+}
+.ui-loader-verbose {
+width: 200px;
+filter: Alpha(Opacity=88);
+opacity: .88;
+box-shadow: 0 1px 1px -1px #fff;
+height: auto;
+margin-left: -110px;
+margin-top: -43px;
+padding: 10px;
+}
+.ui-loader-default h1 {
+font-size: 0;
+width: 0;
+height: 0;
+overflow: hidden;
+}
+.ui-loader-verbose h1 {
+font-size: 16px;
+margin: 0;
+text-align: center;
+}
+.ui-loader .ui-icon {
+background-color: #000;
+display: block;
+margin: 0;
+width: 44px;
+height: 44px;
+padding: 1px;
+-webkit-border-radius: 36px;
+-moz-border-radius: 36px;
+border-radius: 36px;
+}
+.ui-loader-verbose .ui-icon {
+margin: 0 auto 10px;
+filter: Alpha(Opacity=75);
+opacity: .75;
+}
+.ui-loader-textonly {
+padding: 15px;
+margin-left: -115px;
+}
+.ui-loader-textonly .ui-icon {
+display: none;
+}
+.ui-loader-fakefix {
+position: absolute;
+}
+/*fouc*/
+.ui-mobile-rendering > * {
+visibility: hidden;
+}
+
+/*headers, content panels*/
+.ui-bar, .ui-body {
+position: relative;
+padding: .4em 15px;
+overflow: hidden;
+display: block;
+clear: both;
+}
+.ui-bar {
+font-size: 16px;
+margin: 0;
+}
+.ui-bar h1, .ui-bar h2, .ui-bar h3, .ui-bar h4, .ui-bar h5, .ui-bar h6 {
+margin: 0;
+padding: 0;
+font-size: 16px;
+display: inline-block;
+}
+
+.ui-header, .ui-footer {
+position: relative;
+border-left-width: 0;
+border-right-width: 0;
+zoom: 1;
+}
+.ui-header .ui-btn-left,
+.ui-header .ui-btn-right,
+.ui-footer .ui-btn-left,
+.ui-footer .ui-btn-right {
+position: absolute;
+top: 3px;
+}
+.ui-header .ui-btn-left,
+.ui-footer .ui-btn-left {
+left: 5px;
+}
+.ui-header .ui-btn-right,
+.ui-footer .ui-btn-right {
+right: 5px;
+}
+.ui-footer .ui-btn-icon-notext,
+.ui-header .ui-btn-icon-notext {
+top: 6px;
+}
+.ui-header .ui-title, .ui-footer .ui-title {
+min-height: 1.1em;
+text-align: center;
+font-size: 16px;
+display: block;
+margin: .6em 30% .8em;
+padding: 0;
+text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
+outline: 0 !important;
+}
+.ui-footer .ui-title {
+margin: .6em 15px .8em;
+}
+
+/*content area*/
+.ui-content {
+border-width: 0;
+overflow: visible;
+overflow-x: hidden;
+padding: 15px;
+}
+
+/* icons sizing */
+.ui-icon {
+width: 18px;
+height: 18px;
+}
+
+/* non-js content hiding */
+.ui-nojs {
+position: absolute;
+left: -9999px;
+}
+
+/* accessible content hiding */
+.ui-hide-label label.ui-input-text, .ui-hide-label label.ui-select, .ui-hide-label label.ui-slider, .ui-hide-label label.ui-submit, .ui-hide-label .ui-controlgroup-label,
+.ui-hidden-accessible {
+position: absolute !important;
+left: -9999px;
+clip: rect(1px 1px 1px 1px);
+clip: rect(1px,1px,1px,1px);
+}
+.ui-dialog {
+	 background: none !important; /* this is to ensure that dialog theming does not apply (by default at least) on the page div */
+}
+.ui-dialog-contain {
+	width: 92.5%;
+	max-width: 500px;
+	margin: 10% auto 15px auto;
+	padding: 0;
+	position: relative;
+	top: -15px;
+}
+.ui-dialog-contain > .ui-header, 
+.ui-dialog-contain > .ui-content, 
+.ui-dialog-contain > .ui-footer { 
 	display: block;
-}
-input.ui-slider-input,
-.ui-field-contain input.ui-slider-input {
-	display: inline-block;
-	width: 50px;
-	background-image: none;
-	padding: .4em;
-	margin: .5em 0;
-	line-height: 1.4;
-	font-size: 16px;
-	outline: 0;
-}
-input.ui-slider-input.ui-mini,
-.ui-field-contain input.ui-slider-input.ui-mini {
-	width: 45px;
-	margin: .25em 0;
-	font-size: 14px;
-}
-.ui-field-contain input.ui-slider-input {
+	position: relative; 
+	width: auto;
 	margin: 0;
 }
-/* To do: Exclude ui-slider-input from textinput widget initSelector. The class ui-input-text is added to the slider input and label. When this is fixed, the rule below can be deleted. */
-input.ui-slider-input, .ui-field-contain input.ui-slider-input {
-	-webkit-box-sizing: content-box;
-	-moz-box-sizing: content-box;
-	-ms-box-sizing: content-box;
-	box-sizing: content-box;
-}
-select.ui-slider-switch {
-	display: none;
-}
-div.ui-slider {
-	position: relative;
-	display: inline-block;
-	overflow: visible;
-	height: 15px;
-	padding: 0;
-	margin: 0 2% 0 20px;
-	top: 4px;
-	width: 65%;
-}
-div.ui-slider-mini {
-	height: 12px;
-	margin-left: 10px;
-	top: 2px;
-}
-div.ui-slider-bg {
+.ui-dialog-contain > .ui-header {
 	border: none;
-	height: 100%;
-	padding-right: 8px;
-}
-.ui-controlgroup a.ui-slider-handle, a.ui-slider-handle {
-	position: absolute;
-	z-index: 1;
-	top: 50%;
-	width: 28px;
-	height: 28px;
-	margin-top: -15px;
-	margin-left: -15px;
-	outline: 0;
-}
-a.ui-slider-handle .ui-btn-inner {
+	overflow: hidden;
+	z-index: 10; 
 	padding: 0;
-	height: 100%;
 }
-div.ui-slider-mini a.ui-slider-handle {
-	height: 14px;
-	width: 14px;
-	margin: -8px 0 0 -7px;
+.ui-dialog-contain > .ui-content { 
+	padding: 15px; 
 }
-div.ui-slider-mini a.ui-slider-handle .ui-btn-inner {
-	height: 30px;
-	width: 30px;
-	padding: 0;
-	margin: -9px 0 0 -9px;
-	border-top: none;
+.ui-dialog-contain > .ui-footer {
+	z-index: 10; 
+	padding: 0 15px; 
+}
+/* fixed page header & footer configuration */
+.ui-header-fixed,
+.ui-footer-fixed {
+left: 0;
+right: 0;
+width: 100%;
+position: fixed;
+z-index: 1000;
+}
+.ui-header-fixed {
+top: 0;
+}
+.ui-footer-fixed {
+bottom: 0;
+}
+.ui-header-fullscreen,
+.ui-footer-fullscreen {
+filter: Alpha(Opacity=90);
+opacity: .9;
+}
+.ui-page-header-fixed {
+padding-top: 2.6875em;
+}
+.ui-page-footer-fixed {
+padding-bottom: 2.6875em;
+}
+.ui-page-header-fullscreen .ui-content,
+.ui-page-footer-fullscreen .ui-content {
+padding: 0;
+}
+.ui-fixed-hidden {
+position: absolute;
+}
+.ui-page-header-fullscreen .ui-fixed-hidden,
+.ui-page-footer-fullscreen .ui-fixed-hidden {
+left: -99999em;
+}
+.ui-header-fixed .ui-btn,
+.ui-footer-fixed .ui-btn {
+z-index: 10;
 }
 
-@media all and (min-width: 450px) {
-	.ui-field-contain label.ui-slider {
-		vertical-align: top;
-		display: inline-block;
-		width: 20%;
-		margin: 0 2% 0 0;
-	}
-	.ui-field-contain div.ui-slider {
-		width: 43%;
-	}
-	.ui-field-contain div.ui-slider-switch {
-		width: 5.5em;
-	}
-
-}

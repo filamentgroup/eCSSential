@@ -14,102 +14,212 @@
 /* The following CSS is unrelated to this layout. 
 It's here to fill out the weight of this stylesheet so that it more realistically represents
 a real responsive design */
-label.ui-slider {
-	font-size: 16px;
-	line-height: 1.4;
-	font-weight: normal;
-	margin: 0 0 .3em;
-	display: block;
+@import url("jquery.mobile.transition.slidein.keyframes.css");
+@import url("jquery.mobile.transition.slideout.keyframes.css");
+
+.slide.out, .slide.in {
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-duration: 350ms;
+	-moz-animation-timing-function: ease-out;
+	-moz-animation-duration: 350ms;
 }
-input.ui-slider-input,
-.ui-field-contain input.ui-slider-input {
-	display: inline-block;
-	width: 50px;
-	background-image: none;
-	padding: .4em;
-	margin: .5em 0;
-	line-height: 1.4;
-	font-size: 16px;
-	outline: 0;
+.slide.out {
+	-webkit-transform: translateX(-100%);
+	-webkit-animation-name: slideouttoleft;
+	-moz-transform: translateX(-100%);
+	-moz-animation-name: slideouttoleft;
 }
-input.ui-slider-input.ui-mini,
-.ui-field-contain input.ui-slider-input.ui-mini {
-	width: 45px;
-	margin: .25em 0;
-	font-size: 14px;
+
+.slide.in {
+	-webkit-transform: translateX(0);
+	-webkit-animation-name: slideinfromright;
+	-moz-transform: translateX(0);
+	-moz-animation-name: slideinfromright;
 }
-.ui-field-contain input.ui-slider-input {
-	margin: 0;
+
+.slide.out.reverse {
+	-webkit-transform: translateX(100%);
+	-webkit-animation-name: slideouttoright;
+	-moz-transform: translateX(100%);
+	-moz-animation-name: slideouttoright;
 }
-/* To do: Exclude ui-slider-input from textinput widget initSelector. The class ui-input-text is added to the slider input and label. When this is fixed, the rule below can be deleted. */
-input.ui-slider-input, .ui-field-contain input.ui-slider-input {
-	-webkit-box-sizing: content-box;
-	-moz-box-sizing: content-box;
-	-ms-box-sizing: content-box;
-	box-sizing: content-box;
+
+.slide.in.reverse {
+	-webkit-transform: translateX(0);
+	-webkit-animation-name: slideinfromleft;
+	-moz-transform: translateX(0);
+	-moz-animation-name: slideinfromleft;
 }
-select.ui-slider-switch {
-	display: none;
+
+/* slide down */
+.slidedown.out {
+	-webkit-animation-name: fadeout;
+	-moz-animation-name: fadeout;
+	-webkit-animation-duration: 100ms;
+	-moz-animation-duration: 100ms;
 }
-div.ui-slider {
-	position: relative;
-	display: inline-block;
-	overflow: visible;
-	height: 15px;
-	padding: 0;
-	margin: 0 2% 0 20px;
-	top: 4px;
-	width: 65%;
+
+.slidedown.in {
+	-webkit-transform: translateY(0);
+	-webkit-animation-name: slideinfromtop;
+	-moz-transform: translateY(0);
+	-moz-animation-name: slideinfromtop;
+	-webkit-animation-duration: 250ms;
+	-moz-animation-duration: 250ms;
 }
-div.ui-slider-mini {
-	height: 12px;
-	margin-left: 10px;
-	top: 2px;
+
+.slidedown.in.reverse {
+	-webkit-animation-name: fadein;
+	-moz-animation-name: fadein;
+	-webkit-animation-duration: 150ms;
+	-moz-animation-duration: 150ms;
 }
-div.ui-slider-bg {
-	border: none;
-	height: 100%;
-	padding-right: 8px;
+
+.slidedown.out.reverse {
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	-webkit-animation-name: slideouttotop;
+	-moz-animation-name: slideouttotop;
+	-webkit-animation-duration: 200ms;
+	-moz-animation-duration: 200ms;
 }
-.ui-controlgroup a.ui-slider-handle, a.ui-slider-handle {
+
+@-webkit-keyframes slideinfromtop {
+    from { -webkit-transform: translateY(-100%); }
+    to { -webkit-transform: translateY(0); }
+}
+@-moz-keyframes slideinfromtop {
+    from { -moz-transform: translateY(-100%); }
+    to { -moz-transform: translateY(0); }
+}
+
+@-webkit-keyframes slideouttotop {
+    from { -webkit-transform: translateY(0); }
+    to { -webkit-transform: translateY(-100%); }
+}
+@-moz-keyframes slideouttotop {
+    from { -moz-transform: translateY(0); }
+    to { -moz-transform: translateY(-100%); }
+}
+@import url("jquery.mobile.transition.fade.css");
+@import url("jquery.mobile.transition.slideout.keyframes.css");
+
+.slidefade.out {
+	-webkit-transform: translateX(-100%);
+	-webkit-animation-name: slideouttoleft;
+	-moz-transform: translateX(-100%);
+	-moz-animation-name: slideouttoleft;
+	-webkit-animation-duration: 225ms;
+	-moz-animation-duration: 225ms;
+}
+
+.slidefade.in {
+	-webkit-transform: translateX(0);
+	-webkit-animation-name: fadein;
+	-moz-transform: translateX(0);
+	-moz-animation-name: fadein;
+	-webkit-animation-duration: 200ms;
+	-moz-animation-duration: 200ms;
+}
+
+.slidefade.out.reverse {
+	-webkit-transform: translateX(100%);
+	-webkit-animation-name: slideouttoright;
+	-moz-transform: translateX(100%);
+	-moz-animation-name: slideouttoright;
+	-webkit-animation-duration: 200ms;
+	-moz-animation-duration: 200ms;
+}
+
+.slidefade.in.reverse {
+	-webkit-transform: translateX(0);
+	-webkit-animation-name: fadein;
+	-moz-transform: translateX(0);
+	-moz-animation-name: fadein;
+	-webkit-animation-duration: 200ms;
+	-moz-animation-duration: 200ms;
+}
+/* The properties in this rule are only necessary for the 'flip' transition.
+ * We need specify the perspective to create a projection matrix. This will add
+ * some depth as the element flips. The depth number represents the distance of
+ * the viewer from the z-plane. According to the CSS3 spec, 1000 is a moderate
+ * value.
+ */
+
+.viewport-turn {
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
 	position: absolute;
-	z-index: 1;
-	top: 50%;
-	width: 28px;
-	height: 28px;
-	margin-top: -15px;
-	margin-left: -15px;
-	outline: 0;
 }
-a.ui-slider-handle .ui-btn-inner {
-	padding: 0;
-	height: 100%;
-}
-div.ui-slider-mini a.ui-slider-handle {
-	height: 14px;
-	width: 14px;
-	margin: -8px 0 0 -7px;
-}
-div.ui-slider-mini a.ui-slider-handle .ui-btn-inner {
-	height: 30px;
-	width: 30px;
-	padding: 0;
-	margin: -9px 0 0 -9px;
-	border-top: none;
+.turn {
+	-webkit-backface-visibility:hidden;
+	-webkit-transform:translateX(0); /* Needed to work around an iOS 3.1 bug that causes listview thumbs to disappear when -webkit-visibility:hidden is used. */
+	-webkit-transform-origin: 0;
+	
+	-moz-backface-visibility:hidden;
+	-moz-transform:translateX(0); /* Needed to work around an iOS 3.1 bug that causes listview thumbs to disappear when -webkit-visibility:hidden is used. */
+	-moz-transform-origin: 0;
 }
 
-@media all and (min-width: 450px) {
-	.ui-field-contain label.ui-slider {
-		vertical-align: top;
-		display: inline-block;
-		width: 20%;
-		margin: 0 2% 0 0;
-	}
-	.ui-field-contain div.ui-slider {
-		width: 43%;
-	}
-	.ui-field-contain div.ui-slider-switch {
-		width: 5.5em;
-	}
-
+.turn.out {
+	-webkit-transform: rotateY(-90deg) scale(.9);
+	-webkit-animation-name: flipouttoleft;
+	-moz-transform: rotateY(-90deg) scale(.9);
+	-moz-animation-name: flipouttoleft;
+	-webkit-animation-duration: 125ms;
+	-moz-animation-duration: 125ms;
 }
+
+.turn.in {
+	-webkit-animation-name: flipintoright;
+	-moz-animation-name: flipintoright;
+	-webkit-animation-duration: 250ms;
+	-moz-animation-duration: 250ms;
+	
+}
+
+.turn.out.reverse {
+	-webkit-transform: rotateY(90deg) scale(.9);
+	-webkit-animation-name: flipouttoright;
+	-moz-transform: rotateY(90deg) scale(.9);
+	-moz-animation-name: flipouttoright;
+}
+
+.turn.in.reverse {
+	-webkit-animation-name: flipintoleft;
+	-moz-animation-name: flipintoleft;
+}
+
+@-webkit-keyframes flipouttoleft {
+    from { -webkit-transform: rotateY(0); }
+    to { -webkit-transform: rotateY(-90deg) scale(.9); }
+}
+@-moz-keyframes flipouttoleft {
+    from { -moz-transform: rotateY(0); }
+    to { -moz-transform: rotateY(-90deg) scale(.9); }
+}
+@-webkit-keyframes flipouttoright {
+    from { -webkit-transform: rotateY(0) ; }
+    to { -webkit-transform: rotateY(90deg) scale(.9); }
+}
+@-moz-keyframes flipouttoright {
+    from { -moz-transform: rotateY(0); }
+    to { -moz-transform: rotateY(90deg) scale(.9); }
+}
+@-webkit-keyframes flipintoleft {
+    from { -webkit-transform: rotateY(-90deg) scale(.9); }
+    to { -webkit-transform: rotateY(0); }
+}
+@-moz-keyframes flipintoleft {
+    from { -moz-transform: rotateY(-90deg) scale(.9); }
+    to { -moz-transform: rotateY(0); }
+}
+@-webkit-keyframes flipintoright {
+    from { -webkit-transform: rotateY(90deg) scale(.9); }
+    to { -webkit-transform: rotateY(0); }
+}
+@-moz-keyframes flipintoright {
+    from { -moz-transform: rotateY(90deg) scale(.9); }
+    to { -moz-transform: rotateY(0); }
+}
+
