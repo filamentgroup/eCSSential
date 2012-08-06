@@ -1,6 +1,6 @@
-# Performance testing CSS loading: native links vs. eCSSential
+# Performance testing CSS loading: separate native links vs. one concatenated CSS vs.  eCSSential
 
-The following two pages compare the performance of loading 8 CSS files, either natively via `link` elements, or via eCSSential.  
+These demo pages load the same CSS files in different ways to compare performance.
 
 - Demo using native `link` elements: http://filamentgroup.github.com/eCSSential/examples/compare/native.html
 - Demo using eCSSential: http://filamentgroup.github.com/eCSSential/examples/compare/ecssential.html
