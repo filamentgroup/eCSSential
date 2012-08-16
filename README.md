@@ -105,7 +105,7 @@ To configure eCSSential to fetch concatenated files via a single request, you'll
 	},
 	{
 	    concat: function( files ){
-		    return "combined/" + arr.join("").replace( /css\/?/gmi, "" ) + "css";
+		    return "combined/" + files.join("").replace( /css\/?/gmi, "" ) + "css";
 		}
 	});
 
