@@ -1,6 +1,8 @@
 # eCSSential
 ## Making responsive CSS load the way it should.
 
+[![Build Status](https://travis-ci.org/filamentgroup/eCSSential.png)](http://travis-ci.org/filamentgroup/eCSSential)
+
 - [c]2012 @scottjehl, Filament Group, Inc.
 - Licenses: MIT, GPLv2
 
