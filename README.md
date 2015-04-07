@@ -1,4 +1,6 @@
-# eCSSential [![Build Status](https://travis-ci.org/filamentgroup/eCSSential.png)](http://travis-ci.org/filamentgroup/eCSSential)
+# eCSSential 
+
+[![Build Status](https://travis-ci.org/filamentgroup/eCSSential.png)](http://travis-ci.org/filamentgroup/eCSSential)
 
 **NOTE** This project has been deprecated and the repository exists only for reference.
 
